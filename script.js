@@ -1,5 +1,110 @@
 $(document).ready(function(){
 
+// MOMENT.JS
+    // 1) Date/Time displayed at top of page for user
+const today = moment().format('MMMM Do YYYY H:mm');
+var currentDay = $("#currentDay");
+currentDay.text(today);
+
+    // 2) Time right now
+const rightNow = moment().format('H');
+
+    // 3) color-coded blocks
+        // gray for past
+        // red for current
+        // green for future
+var slotNine = $("#schedule-nine");
+var nine = 9;
+if (nine < rightNow) {
+    slotNine.css("background-color", "lightgrey");
+} else if (nine > rightNow) {
+    slotNine.css("background-color", "green");
+} else {
+    slotNine.css("background-color", "red");
+}
+
+var slotTen = $("#schedule-ten");
+var ten = 10;
+if (ten < rightNow) {
+    slotTen.css("background-color", "lightgrey");
+} else if (ten > rightNow) {
+    slotTen.css("background-color", "green");
+} else {
+    slotTen.css("background-color", "red");
+}
+    
+var slotEleven = $("#schedule-eleven");
+var eleven = 11;
+if (eleven < rightNow) {
+    slotEleven.css("background-color", "lightgrey");
+} else if (eleven > rightNow) {
+    slotEleven.css("background-color", "green");
+} else {
+    slotEleven.css("background-color", "red");
+}
+
+var slotTwelve = $("#schedule-twelve");
+var twelve = 12;
+if (twelve < rightNow) {
+    slotTwelve.css("background-color", "lightgrey");
+} else if (twelve > rightNow) {
+    slotTwelve.css("background-color", "green");
+} else {
+    slotTwelve.css("background-color", "red");
+}
+
+var slotThirteen = $("#schedule-thirteen");
+var thirteen = 13;
+if (thirteen < rightNow) {
+    slotThirteen.css("background-color", "lightgrey");
+} else if (thirteen > rightNow) {
+    slotThirteen.css("background-color", "green");
+} else {
+    slotThirteen.css("background-color", "red");
+}
+
+var slotFourteen = $("#schedule-fourteen");
+var fourteen = 14;
+if (fourteen < rightNow) {
+    slotFourteen.css("background-color", "lightgrey");
+} else if (fourteen > rightNow) {
+    slotFourteen.css("background-color", "green");
+} else {
+    slotFourteen.css("background-color", "red");
+}
+
+var slotFifteen = $("#schedule-fifteen");
+var fifteen = 15;
+if (fifteen < rightNow) {
+    slotFifteen.css("background-color", "lightgrey");
+} else if (fifteen > rightNow) {
+    slotFifteen.css("background-color", "green");
+} else {
+    slotFifteen.css("background-color", "red");
+}
+
+var slotSixteen = $("#schedule-sixteen");
+var sixteen = 16;
+if (sixteen < rightNow) {
+    slotSixteen.css("background-color", "lightgrey");
+} else if (sixteen > rightNow) {
+    slotSixteen.css("background-color", "green");
+} else {
+    slotSixteen.css("background-color", "red");
+}
+
+var slotSeventeen = $("#schedule-seventeen");
+var seventeen = 17;
+if (seventeen < rightNow) {
+    slotSeventeen.css("background-color", "lightgrey");
+} else if (seventeen > rightNow) {
+    slotSeventeen.css("background-color", "green");
+} else {
+    slotSeventeen.css("background-color", "red");
+}
+
+
+
     // 1) User will be able to type into the textarea
     // 2) User will be able to save their text
     // 3) When user refreshes, they will see their text is saved
@@ -105,18 +210,3 @@ localStorage.setItem("message-seventeen", slotSeventeen.val());
 
 
 });
-
-
-
-
-// MOMENT.JS
-    // 1) Date/Time displayed at top of page for user
-    // 2) color-coded blocks
-        // gray for past
-        // red for current
-        // green for future
-    // 3) Time displayed on the left of each block
-
-
-
-
